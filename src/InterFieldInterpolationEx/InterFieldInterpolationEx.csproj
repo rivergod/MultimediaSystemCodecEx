@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>920d7278-6af2-4007-a0aa-1b3b2367a82a</ProjectGuid>
+    <ProjectGuid>{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InterFieldInterpolationEx</RootNamespace>
