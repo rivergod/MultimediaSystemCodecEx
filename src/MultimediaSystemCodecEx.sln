@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibFisherEx", "LibFisherEx\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecFisherEx", "DecFisherEx\DecFisherEx.csproj", "{71F89271-9B87-489C-A52B-193520B5C394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterFieldInterpolationEx", "InterFieldInterpolationEx\InterFieldInterpolationEx.csproj", "{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeinterlacingWeaveEx", "DeinterlacingWeaveEx\DeinterlacingWeaveEx.csproj", "{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

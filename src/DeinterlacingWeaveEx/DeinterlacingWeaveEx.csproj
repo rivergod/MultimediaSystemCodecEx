@@ -8,8 +8,8 @@
     <ProjectGuid>{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InterFieldInterpolationEx</RootNamespace>
-    <AssemblyName>InterFieldInterpolationEx</AssemblyName>
+    <RootNamespace>DeinterlacingWeaveEx</RootNamespace>
+    <AssemblyName>DeinterlacingWeaveEx</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
