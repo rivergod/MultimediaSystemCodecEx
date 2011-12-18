@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecFisherEx", "DecFisherEx\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeinterlacingWeaveEx", "DeinterlacingWeaveEx\DeinterlacingWeaveEx.csproj", "{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeinterlacingBobEx", "DeinterlacingBobEx\DeinterlacingBobEx.csproj", "{71DF9F11-5B25-4492-A7CE-7DE03F097C43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,16 @@ Global
 		{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}.Release|Mixed Platforms.Build.0 = Release|x86
 		{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}.Release|x86.ActiveCfg = Release|x86
 		{6183D0AA-AE23-4A3F-8881-25FD1BF8CED2}.Release|x86.Build.0 = Release|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Debug|x86.ActiveCfg = Debug|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Debug|x86.Build.0 = Debug|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Release|Any CPU.ActiveCfg = Release|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Release|Mixed Platforms.Build.0 = Release|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Release|x86.ActiveCfg = Release|x86
+		{71DF9F11-5B25-4492-A7CE-7DE03F097C43}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

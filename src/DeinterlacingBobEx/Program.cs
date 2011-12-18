@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace InterFieldInterpolationEx
+namespace DeinterlacingBobEx
 {
 	class Program
 	{
@@ -37,14 +37,14 @@ namespace InterFieldInterpolationEx
 				}
 			}
 
-			imgFiles.ForEach(path => { 
+			imgFiles.ForEach(path =>
+			{
 				Program.DoStep(ref currBitmap, ref currPos, path);
 				currBitmap.Save(Path.GetFullPath(args[1] + String.Format("{0:D6}", currPos)) + ".bmp");
 				System.Console.Write(".");
 			});
 			System.Console.Write("\n");
 		}
-
 		public static void DoStep(ref Bitmap prevBitmap, ref int currPos, string inputPath)
 		{
 			currPos++;
@@ -53,11 +53,48 @@ namespace InterFieldInterpolationEx
 
 			Bitmap inputBitmap = new Bitmap(inputPath);
 
-			for (int j = (isodd ? 0 : 1 ) ; j < prevBitmap.Height; j += 2)
+			if (isodd)
 			{
-				for (int i = 0; i < prevBitmap.Width; i++)
+				for (int j = 0; j < prevBitmap.Height; j++)
 				{
-					prevBitmap.SetPixel(i, j, inputBitmap.GetPixel(i, (int)(j / 2)));
+					for (int i = 0; i < prevBitmap.Width; i++)
+					{
+						if (j%2 == 0 || j == prevBitmap.Height - 1)
+						{
+							// 가장 마지막줄 이거나 홀수라인일때
+							prevBitmap.SetPixel(i, j, inputBitmap.GetPixel(i, (int)(j / 2)));
+						}
+						else
+						{
+							//짝수라인일때
+							Color top = inputBitmap.GetPixel(i, (int)j/2);
+							Color bottom = inputBitmap.GetPixel(i, (int)(j/2 + 1));
+							prevBitmap.SetPixel(i, j, Color.FromArgb((int)((top.R + bottom.R) /2), (int)((top.G + bottom.G) /2), (int)((top.B + bottom.B) /2)));
+						}
+						
+					}
+				}
+			}
+			else
+			{
+				for (int j = 0; j < prevBitmap.Height; j++)
+				{
+					for (int i = 0; i < prevBitmap.Width; i++)
+					{
+						if (j % 2 == 1 || j == 0)
+						{
+							// 가장 첫줄 이거나 짝수라인일때
+							prevBitmap.SetPixel(i, j, inputBitmap.GetPixel(i, (int)(j / 2)));
+						}
+						else
+						{
+							//홀수라인일때
+							Color top = inputBitmap.GetPixel(i, (int)(j-1) / 2);
+							Color bottom = inputBitmap.GetPixel(i, (int)((j-1) / 2 + 1));
+							prevBitmap.SetPixel(i, j, Color.FromArgb((int)((top.R + bottom.R) / 2), (int)((top.G + bottom.G) / 2), (int)((top.B + bottom.B) / 2)));
+						}
+
+					}
 				}
 			}
 		}
