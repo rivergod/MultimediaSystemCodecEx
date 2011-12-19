@@ -124,19 +124,19 @@ namespace DeinterlacingELAEx
 							if (i == 0 || i == prevBitmap.Width - 1)
 							{
 								//border line
-								Color top = inputBitmap.GetPixel(i, (int)j / 2);
-								Color bottom = inputBitmap.GetPixel(i, (int)(j / 2 + 1));
+								Color top = inputBitmap.GetPixel(i, (int)(j-1) / 2);
+								Color bottom = inputBitmap.GetPixel(i, (int)((j - 1) / 2 + 1));
 								prevBitmap.SetPixel(i, j, Color.FromArgb((int)((top.R + bottom.R) / 2), (int)((top.G + bottom.G) / 2), (int)((top.B + bottom.B) / 2)));
 							}
 							else
 							{
 								//in space
-								Color topLeft = inputBitmap.GetPixel(i - 1, (int)j / 2);
-								Color topCenter = inputBitmap.GetPixel(i, (int)j / 2);
-								Color topRight = inputBitmap.GetPixel(i + 1, (int)j / 2);
-								Color bottomLeft = inputBitmap.GetPixel(i - 1, (int)(j / 2 + 1));
-								Color bottomCenter = inputBitmap.GetPixel(i, (int)(j / 2 + 1));
-								Color bottomRight = inputBitmap.GetPixel(i + 1, (int)(j / 2 + 1));
+								Color topLeft = inputBitmap.GetPixel(i - 1, (int)(j - 1) / 2);
+								Color topCenter = inputBitmap.GetPixel(i, (int)(j - 1) / 2);
+								Color topRight = inputBitmap.GetPixel(i + 1, (int)(j - 1) / 2);
+								Color bottomLeft = inputBitmap.GetPixel(i - 1, (int)((j - 1) / 2 + 1));
+								Color bottomCenter = inputBitmap.GetPixel(i, (int)((j - 1) / 2 + 1));
+								Color bottomRight = inputBitmap.GetPixel(i + 1, (int)((j - 1) / 2 + 1));
 
 								int absTopLeftBottomRight = Math.Abs(topLeft.R - bottomRight.R) + Math.Abs(topLeft.G - bottomRight.G) + Math.Abs(topLeft.B - bottomRight.B);
 								int absTopCenterBottomCenter = Math.Abs(topCenter.R - bottomCenter.R) + Math.Abs(topCenter.G - bottomCenter.G) + Math.Abs(topCenter.B - bottomCenter.B);
