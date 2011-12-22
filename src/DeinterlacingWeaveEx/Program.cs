@@ -37,12 +37,17 @@ namespace InterFieldInterpolationEx
 				}
 			}
 
+			System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
+
 			imgFiles.ForEach(path => { 
 				Program.DoStep(ref currBitmap, ref currPos, path);
 				currBitmap.Save(Path.GetFullPath(args[1] + String.Format("{0:D6}", currPos)) + ".bmp");
 				System.Console.Write(".");
 			});
-			System.Console.Write("\n");
+
+			sw.Stop();
+
+			System.Console.Write("{0}ms\n", sw.ElapsedMilliseconds);
 		}
 
 		public static void DoStep(ref Bitmap prevBitmap, ref int currPos, string inputPath)

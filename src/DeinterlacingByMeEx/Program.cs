@@ -37,13 +37,18 @@ namespace DeinterlacingByMeEx
 				}
 			}
 
+			System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
+
 			imgFiles.ForEach(path =>
 			{
 				Program.DoStep(ref currBitmap, ref currPos, path);
 				currBitmap.Save(Path.GetFullPath(args[1] + String.Format("{0:D6}", currPos)) + ".bmp");
 				System.Console.Write(".");
 			});
-			System.Console.Write("\n");
+
+			sw.Stop();
+
+			System.Console.Write("{0}ms\n", sw.ElapsedMilliseconds);
 		}
 
 		public static void DoStep(ref Bitmap prevBitmap, ref int currPos, string inputPath)
@@ -63,7 +68,7 @@ namespace DeinterlacingByMeEx
 			}
 
 			//Low pass filter
-			for (int j = 1; j < prevBitmap.Height - 1; j += 2)
+			for (int j = 1 + (isodd ? 0 : 1); j < prevBitmap.Height - 1; j += 2)
 			{
 				for (int i = 1; i < prevBitmap.Width - 1; i++)
 				{
