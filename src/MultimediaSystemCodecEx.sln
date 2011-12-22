@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeinterlacingELAEx", "Deint
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeinterlacingByMeEx", "DeinterlacingByMeEx\DeinterlacingByMeEx.csproj", "{2F6C4E3D-B967-4E48-AD13-9F6B42EDD373}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDiffImg", "CreateDiffImg\CreateDiffImg.csproj", "{A8799AE8-92D4-4440-A986-D2FC81A1D06C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,16 @@ Global
 		{2F6C4E3D-B967-4E48-AD13-9F6B42EDD373}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2F6C4E3D-B967-4E48-AD13-9F6B42EDD373}.Release|x86.ActiveCfg = Release|x86
 		{2F6C4E3D-B967-4E48-AD13-9F6B42EDD373}.Release|x86.Build.0 = Release|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Debug|x86.ActiveCfg = Debug|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Debug|x86.Build.0 = Debug|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Release|Any CPU.ActiveCfg = Release|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Release|x86.ActiveCfg = Release|x86
+		{A8799AE8-92D4-4440-A986-D2FC81A1D06C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
